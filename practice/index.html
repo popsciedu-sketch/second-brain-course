@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-MO">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Logseq 實作 · 第二大腦互動教學</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body data-page="practice">
+<div class="overlay"></div>
+<div class="topbar">
+  <button class="menu-btn" data-menu type="button">☰ 目錄</button>
+  <strong>第二大腦互動教學</strong>
+</div>
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">腦</div>
+    <div>
+      <h1>第二大腦</h1>
+      <p>涂子沛 · 互動教學</p>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-label"><span>學習進度</span><span data-progress-text>0%</span></div>
+    <div class="progress-bar"><span data-progress-fill></span></div>
+  </div>
+  <nav class="nav">
+<div class="nav-section">導覽</div>
+<a href="../index.html" data-page="index">總覽</a>
+<a href="../chapters/preface.html" data-page="preface">推薦序</a>
+<a href="../chapters/ch01.html" data-page="ch01">第一章・為什麼需要</a>
+<a href="../chapters/ch02.html" data-page="ch02">第二章・數位記憶體</a>
+<a href="../chapters/ch03.html" data-page="ch03">第三章・高級思考</a>
+<a href="../chapters/ch04.html" data-page="ch04">第四章・誤區與方法</a>
+<a href="../chapters/ch05.html" data-page="ch05">第五章・遺產與傳承</a>
+<a href="../chapters/epilogue.html" data-page="epilogue">結語</a>
+<div class="nav-section">實作路徑</div>
+<a href="index.html" data-page="practice">Logseq 實作</a>
+  </nav>
+</aside>
+<main class="main">
+<div class="container">
+
+<div class="kicker">實作路徑</div>
+<h2>Logseq 實作：從安裝到 Query</h2>
+<p class="lead">按下列步驟建立一個小型「第二大腦」練習庫。可下載練習資料包匯入或對照輸入。每步附預期畫面示意（自製 UI 示意，非官方截圖）。</p>
+<div class="card teal" style="margin-bottom:1rem">
+  <h3>練習資料</h3>
+  <p>路徑：<span class="mono">assets/practice-data/</span> · 內含示例 Markdown 與 zip。清單見 <span class="mono">DRIVE_UPLOAD_MANIFEST.md</span>。</p>
+  <p style="display:flex;flex-wrap:wrap;gap:.5rem">
+    <a class="btn" href="../assets/practice-data/second-brain-practice-pack.zip">下載練習包（本地）</a>
+    <a class="btn ghost" href="https://drive.google.com/file/d/1LMfIa8EM92kwcpWIWfQf8y-GsNRN9Kp7/view?usp=drivesdk" target="_blank" rel="noopener">Google Drive 練習包</a>
+    <a class="btn ghost" href="https://drive.google.com/drive/folders/1ZCUVje9qwt6XFagqQQFJ7Pdbyq1Y342B" target="_blank" rel="noopener">Drive 資料夾</a>
+  </p>
+</div>
+
+<div class="steps">
+  <div class="step">
+    <h4>下載並安裝 Logseq</h4>
+    <p>前往 <a href="https://logseq.com" target="_blank" rel="noopener">logseq.com</a> 下載桌面版（Windows／macOS／Linux）。安裝後開啟應用程式。亦可先用瀏覽器版體驗，但本教程以<strong>本地 graph 資料夾</strong>為準，方便備份與傳承。</p>
+    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="body">Welcome to Logseq
+[ Add local graph ]   [ Clone from Git ]</div></div>
+  </div>
+
+  <div class="step">
+    <h4>建立本地 Graph</h4>
+    <p>選擇「Add local graph」，新建資料夾例如 <span class="mono">SecondBrain-Practice</span>。這就是你的大腦皮層檔案根目錄——全是明文 Markdown／資料檔，利於繼承。</p>
+  </div>
+
+  <div class="step">
+    <h4>認識日記頁（預設捕獲面）</h4>
+    <p>左側點 Journals。每一天自動有一頁。在子彈後輸入第一塊：</p>
+    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span> Journals · 2026-10-28</div>
+    <div class="body">- 今天開始建立第二大腦練習庫
+- 靈感：發表會開場改用故事 <span class="tag">#靈感</span>
+- TODO 匯入練習資料包</div></div>
+    <p>預期：三個子彈塊；標籤 <span class="mono">#靈感</span> 可點進標籤頁。</p>
+  </div>
+
+  <div class="step">
+    <h4>建立知識反射區頁</h4>
+    <p>輸入 <span class="mono">[[友誼]]</span> 並進入該頁，寫下兩則與主題相關的塊（可用自己的話，勿整段抄書）。</p>
+    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span> Page · 友誼</div>
+    <div class="body">- 友誼需要定期的小額「情感存款」，不是只在有事才聯絡
+- 摘錄化用：真正的關心是記得對方在意的細節
+- 回鏈：見 [[日記練習/2026-10-28]]</div></div>
+  </div>
+
+  <div class="step">
+    <h4>建立專案頁</h4>
+    <p>建立 <span class="mono">[[專案/產品發表]]</span>，放入目標、待辦與素材連結。專案結束後停止更新，保留為歷史。</p>
+    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span> 專案/產品發表</div>
+    <div class="body">- 目標：30 分鐘完成故事型開場演練
+- TODO 寫 90 秒開場白
+- TODO 準備三張示意圖
+- 相關：[[友誼]] 中「情感存款」可作開場隱喻</div></div>
+  </div>
+
+  <div class="step">
+    <h4>建立備忘頁</h4>
+    <p>建立 <span class="mono">[[備忘]]</span>，放入低加工資訊，避免污染知識頁。</p>
+    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span> 備忘</div>
+    <div class="body">- 練習用虛擬地址：澳門範例街 12 號
+- 常用連結：https://logseq.com
+- 食譜：燕麥粥＝燕麥+牛奶+堅果</div></div>
+  </div>
+
+  <div class="step">
+    <h4>雙向連結與區塊引用</h4>
+    <p>在日記中輸入 <span class="mono">((</span> 觸發塊引用，把「故事開場」那塊嵌到專案頁。修改原塊時，引用處同步——這就是避免複製漂移。</p>
+    <div class="callout">預期畫面：專案頁出現灰色引用塊，點擊可跳回原塊。</div>
+  </div>
+
+  <div class="step">
+    <h4>四類分揀演練</h4>
+    <p>打開練習包中的 <span class="mono">inbox-unsorted.md</span>，把每條拖進或改寫到知識／專案／日記／備忘。目標：inbox 清空。</p>
+    <figure class="figure">
+<svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="四類資訊分揀">
+  <rect width="720" height="260" rx="16" fill="#faf8f5"/>
+  <g font-family="Noto Sans TC,sans-serif">
+    <rect x="20" y="40" width="160" height="170" rx="14" fill="#ede4f5" stroke="#5b2d8e"/>
+    <text x="100" y="80" text-anchor="middle" fill="#5b2d8e" font-size="18" font-weight="700">知識</text>
+    <text x="100" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">長期主題</text>
+    <text x="100" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">領域反射區</text>
+    <text x="100" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">例：友誼、寫作</text>
+
+    <rect x="195" y="40" width="160" height="170" rx="14" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="275" y="80" text-anchor="middle" fill="#1d4ed8" font-size="18" font-weight="700">專案</text>
+    <text x="275" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">有期限任務</text>
+    <text x="275" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">完成後封存</text>
+    <text x="275" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">例：發表會</text>
+
+    <rect x="370" y="40" width="160" height="170" rx="14" fill="#d9f5f1" stroke="#0d9488"/>
+    <text x="450" y="80" text-anchor="middle" fill="#0f766e" font-size="18" font-weight="700">日記</text>
+    <text x="450" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">按日流入</text>
+    <text x="450" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">未分類暫存</text>
+    <text x="450" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">日常活動</text>
+
+    <rect x="545" y="40" width="155" height="170" rx="14" fill="#ffedd5" stroke="#c2410c"/>
+    <text x="622" y="80" text-anchor="middle" fill="#c2410c" font-size="18" font-weight="700">備忘</text>
+    <text x="622" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">資訊非知識</text>
+    <text x="622" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">密碼、食譜</text>
+    <text x="622" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">地址、連結</text>
+  </g>
+</svg>
+<figcaption>分揀時對照這四格。</figcaption></figure>
+  </div>
+
+  <div class="step">
+    <h4>Query 儀表板</h4>
+    <p>新建頁 <span class="mono">[[儀表板]]</span>，插入：</p>
+    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="body">## 未完成
+{{query (and (task TODO) [[專案/產品發表]])}}
+
+## 靈感
+{{query (and (page-tags #靈感))}}</div></div>
+    <p>預期：自動列出符合條件的塊。若語法隨版本差異，改用查詢建構器點選條件亦可。</p>
+  </div>
+
+  <div class="step">
+    <h4>一週回顧節奏</h4>
+    <p>每週固定 20 分鐘：<br/>① 掃日記未連結塊 → ② 補雙向連結 → ③ 封存已完成專案 → ④ 備忘頁去蕪存菁。</p>
+  </div>
+</div>
+
+<section class="section">
+  <h3>實作自測</h3>
+
+<div class="quiz" data-quiz="qp_1" data-answer="b" data-ok="對。先捕獲，再分流到反射區。" data-bad="回想『革命性日記模式』。">
+  <div class="q-meta">互動問答</div>
+  <h4>日記頁在流程中的主要角色是？</h4>
+  <div class="options"><label><input type="radio" name="qp_1" value="a"/> <span>永久封存密碼的唯一位置</span></label>
+<label><input type="radio" name="qp_1" value="b"/> <span>低摩擦的預設捕獲面</span></label>
+<label><input type="radio" name="qp_1" value="c"/> <span>只能寫心情</span></label>
+<label><input type="radio" name="qp_1" value="d"/> <span>取代專案頁</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
+
+<div class="quiz" data-quiz="qp_2" data-answer="b" data-ok="正確。" data-bad="避免多副本漂移。">
+  <div class="q-meta">互動問答</div>
+  <h4>區塊引用優於複製貼上的原因？</h4>
+  <div class="options"><label><input type="radio" name="qp_2" value="a"/> <span>字體比較好看</span></label>
+<label><input type="radio" name="qp_2" value="b"/> <span>維持單一來源，修改可同步</span></label>
+<label><input type="radio" name="qp_2" value="c"/> <span>不能點擊</span></label>
+<label><input type="radio" name="qp_2" value="d"/> <span>會自動刪除原塊</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
+
+<div class="quiz" data-quiz="qp_3" data-answer="b" data-ok="錯誤。通常停止更新並封存為歷史資料，利於複盤與傳承。" data-bad="歷史專案仍是遺產的一部分。">
+  <div class="q-meta">互動問答</div>
+  <h4>判斷題：專案完成後應立刻刪除專案頁，以免佔空間。</h4>
+  <div class="options"><label><input type="radio" name="qp_3" value="a"/> <span>正確</span></label>
+<label><input type="radio" name="qp_3" value="b"/> <span>錯誤</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
+</section>
+
+<div class="summary"><h3>實作總結</h3><ul>
+<li>本地 graph＝可備份、可繼承的大腦檔案。</li>
+<li>日記捕獲 → 四類分揀 → 連結／引用 → Query 回顧。</li>
+<li>用練習包完成一次「微型人生資料庫」循環。</li>
+</ul></div>
+<p class="pager"><a class="btn ghost" href="../chapters/epilogue.html">← 結語</a><a class="btn" href="../index.html">回總覽</a></p>
+
+<div class="footer-note">本站為消化《第二大腦》（涂子沛／三采）後的自寫教學，非原文轉載。僅供個人學習使用。</div>
+</div>
+</main>
+</div>
+<script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
+</body>
+</html>

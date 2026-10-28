@@ -1,0 +1,17 @@
+
+<svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="數位遺產傳承示意">
+  <rect width="720" height="240" rx="16" fill="#faf8f5"/>
+  <rect x="40" y="50" width="180" height="120" rx="12" fill="#ede4f5" stroke="#5b2d8e"/>
+  <text x="130" y="105" text-anchor="middle" fill="#5b2d8e" font-size="15" font-weight="700" font-family="Noto Sans TC,sans-serif">你的第二大腦</text>
+  <text x="130" y="130" text-anchor="middle" fill="#4a4a5a" font-size="12" font-family="Noto Sans TC,sans-serif">想法·專案·日記</text>
+  <path d="M240 110 H310" stroke="#1a1a2e" stroke-width="2"/>
+  <polygon points="310,104 324,110 310,116" fill="#1a1a2e"/>
+  <rect x="330" y="50" width="180" height="120" rx="12" fill="#d9f5f1" stroke="#0d9488"/>
+  <text x="420" y="105" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700" font-family="Noto Sans TC,sans-serif">家人／後人</text>
+  <text x="420" y="130" text-anchor="middle" fill="#4a4a5a" font-size="12" font-family="Noto Sans TC,sans-serif">可搜尋的智慧遺產</text>
+  <path d="M530 110 H600" stroke="#1a1a2e" stroke-width="2"/>
+  <polygon points="600,104 614,110 600,116" fill="#1a1a2e"/>
+  <rect x="620" y="70" width="70" height="80" rx="12" fill="#1a1a2e"/>
+  <text x="655" y="115" text-anchor="middle" fill="#5eead4" font-size="12" font-family="Noto Sans TC,sans-serif">AI</text>
+  <text x="360" y="210" text-anchor="middle" fill="#7a7a8c" font-size="13" font-family="Noto Sans TC,sans-serif">個人知識可被繼承，並與 AI 協作延續價值</text>
+</svg>

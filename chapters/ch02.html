@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-MO">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>第二章 · 第二大腦互動教學</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body data-page="ch02">
+<div class="overlay"></div>
+<div class="topbar">
+  <button class="menu-btn" data-menu type="button">☰ 目錄</button>
+  <strong>第二大腦互動教學</strong>
+</div>
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">腦</div>
+    <div>
+      <h1>第二大腦</h1>
+      <p>涂子沛 · 互動教學</p>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-label"><span>學習進度</span><span data-progress-text>0%</span></div>
+    <div class="progress-bar"><span data-progress-fill></span></div>
+  </div>
+  <nav class="nav">
+<div class="nav-section">導覽</div>
+<a href="../index.html" data-page="index">總覽</a>
+<a href="preface.html" data-page="preface">推薦序</a>
+<a href="ch01.html" data-page="ch01">第一章・為什麼需要</a>
+<a href="ch02.html" data-page="ch02">第二章・數位記憶體</a>
+<a href="ch03.html" data-page="ch03">第三章・高級思考</a>
+<a href="ch04.html" data-page="ch04">第四章・誤區與方法</a>
+<a href="ch05.html" data-page="ch05">第五章・遺產與傳承</a>
+<a href="epilogue.html" data-page="epilogue">結語</a>
+<div class="nav-section">實作路徑</div>
+<a href="../practice/index.html" data-page="practice">Logseq 實作</a>
+  </nav>
+</aside>
+<main class="main">
+<div class="container">
+
+<div class="kicker">第二章</div>
+<h2>構建數位記憶體</h2>
+<p class="lead">這一章是全書「施工圖」：把生物神經結構映射到筆記原語——<strong>塊＝神經元</strong>、<strong>標籤＝人工突觸</strong>、<strong>頁＝反射區</strong>，再用四類分揀與日記模式讓系統可長期運轉。</p>
+
+<figure class="figure">
+<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="塊標籤頁對應神經結構">
+  <rect width="720" height="320" rx="16" fill="#fff"/>
+  <!-- neurons / blocks -->
+  <circle cx="120" cy="100" r="28" fill="#5b2d8e"/>
+  <circle cx="220" cy="180" r="28" fill="#5b2d8e"/>
+  <circle cx="140" cy="240" r="22" fill="#7c3aed"/>
+  <circle cx="280" cy="90" r="22" fill="#7c3aed"/>
+  <line x1="145" y1="118" x2="200" y2="160" stroke="#c4b5fd" stroke-width="3"/>
+  <line x1="140" y1="128" x2="145" y2="218" stroke="#c4b5fd" stroke-width="3"/>
+  <line x1="148" y1="90" x2="258" y2="90" stroke="#c4b5fd" stroke-width="3"/>
+  <line x1="240" y1="160" x2="265" y2="110" stroke="#c4b5fd" stroke-width="3"/>
+  <text x="120" y="105" text-anchor="middle" fill="#fff" font-size="12" font-family="Noto Sans TC,sans-serif">塊</text>
+  <text x="220" y="185" text-anchor="middle" fill="#fff" font-size="12" font-family="Noto Sans TC,sans-serif">塊</text>
+  <text x="180" y="40" text-anchor="middle" fill="#5b2d8e" font-size="16" font-weight="700" font-family="Noto Sans TC,sans-serif">神經元 = 塊</text>
+  <text x="180" y="300" text-anchor="middle" fill="#7a7a8c" font-size="12" font-family="Noto Sans TC,sans-serif">標籤 = 人工突觸（連線）</text>
+  <!-- page / cortex -->
+  <rect x="400" y="50" width="280" height="220" rx="14" fill="#d9f5f1" stroke="#0d9488" stroke-width="2"/>
+  <text x="540" y="85" text-anchor="middle" fill="#0d9488" font-size="16" font-weight="700" font-family="Noto Sans TC,sans-serif">頁 = 反射區</text>
+  <rect x="430" y="110" width="220" height="36" rx="8" fill="#fff" stroke="#99f6e4"/>
+  <rect x="430" y="160" width="220" height="36" rx="8" fill="#fff" stroke="#99f6e4"/>
+  <rect x="430" y="210" width="220" height="36" rx="8" fill="#fff" stroke="#99f6e4"/>
+  <text x="540" y="133" text-anchor="middle" fill="#134e4a" font-size="13" font-family="Noto Sans TC,sans-serif">主題頁：友誼</text>
+  <text x="540" y="183" text-anchor="middle" fill="#134e4a" font-size="13" font-family="Noto Sans TC,sans-serif">專案頁：產品發表</text>
+  <text x="540" y="233" text-anchor="middle" fill="#134e4a" font-size="13" font-family="Noto Sans TC,sans-serif">日記頁：2026-10-28</text>
+</svg>
+<figcaption>圖 2：塊／標籤／頁的神經隱喻。</figcaption></figure>
+
+<section class="section">
+  <h3>1. 塊：第二大腦的神經元</h3>
+  <p>「塊」（block）是最小意義單位：一句想法、一條待辦、一段摘錄。塊有獨立身份（ID），可被引用、嵌入，而不必複製貼上造成多個互相漂移的副本。寫塊時尽量<strong>原子化</strong>：一件事一塊，方便之後重組。</p>
+  <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span> Logseq</div>
+  <div class="body">- 靈感：產品發表改用故事開場，而不是規格表
+  - 原因：聽眾先需要情緒錨點
+  - 下一步：起草 90 秒開場白</div></div>
+</section>
+
+<section class="section">
+  <h3>2. 標籤：為塊建立人工突觸</h3>
+  <p>標籤把分散的塊「拉」到同一條思維路徑上。好標籤像穩定的突觸：不過度細碎、可複用。例如 <span class="mono tag">#決策</span>、<span class="mono tag">#閱讀</span>、<span class="mono tag">#健康</span>。標籤不是目錄的替代品，而是<strong>跨頁連結的快捷方式</strong>。</p>
+</section>
+
+<section class="section">
+  <h3>3. 頁：第二大腦的反射區</h3>
+  <p>頁（page）像大腦皮層上的功能區：同一主題的塊匯聚於此。打開「友誼」頁，應能看到多年來與友誼相關的思考與摘錄；打開某專案頁，則是該專案的地圖與素材庫。</p>
+</section>
+
+<section class="section">
+  <h3>4. 神經中樞與大腦皮層的意義</h3>
+  <p>日常日記流像資訊進出的「中樞通道」；主題頁與專案頁則像逐漸分化的皮層區域。長期使用後，你不是在「找檔案」，而是在不同反射區之間跳躍，形成個人化的認知地圖。</p>
+</section>
+
+<section class="section">
+  <h3>5. 用四個大類分揀一生所有的訊息</h3>
+  <p>每寫完一塊，立刻問：它屬哪一類？書中實用四分法：</p>
+  <figure class="figure">
+<svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="四類資訊分揀">
+  <rect width="720" height="260" rx="16" fill="#faf8f5"/>
+  <g font-family="Noto Sans TC,sans-serif">
+    <rect x="20" y="40" width="160" height="170" rx="14" fill="#ede4f5" stroke="#5b2d8e"/>
+    <text x="100" y="80" text-anchor="middle" fill="#5b2d8e" font-size="18" font-weight="700">知識</text>
+    <text x="100" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">長期主題</text>
+    <text x="100" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">領域反射區</text>
+    <text x="100" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">例：友誼、寫作</text>
+
+    <rect x="195" y="40" width="160" height="170" rx="14" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="275" y="80" text-anchor="middle" fill="#1d4ed8" font-size="18" font-weight="700">專案</text>
+    <text x="275" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">有期限任務</text>
+    <text x="275" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">完成後封存</text>
+    <text x="275" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">例：發表會</text>
+
+    <rect x="370" y="40" width="160" height="170" rx="14" fill="#d9f5f1" stroke="#0d9488"/>
+    <text x="450" y="80" text-anchor="middle" fill="#0f766e" font-size="18" font-weight="700">日記</text>
+    <text x="450" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">按日流入</text>
+    <text x="450" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">未分類暫存</text>
+    <text x="450" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">日常活動</text>
+
+    <rect x="545" y="40" width="155" height="170" rx="14" fill="#ffedd5" stroke="#c2410c"/>
+    <text x="622" y="80" text-anchor="middle" fill="#c2410c" font-size="18" font-weight="700">備忘</text>
+    <text x="622" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">資訊非知識</text>
+    <text x="622" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">密碼、食譜</text>
+    <text x="622" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">地址、連結</text>
+  </g>
+</svg>
+<figcaption>圖 3：知識 · 專案 · 日記 · 備忘。</figcaption></figure>
+  <ul>
+    <li><strong>知識</strong>：長期主題／領域反射區（如「友誼」），可持續完善。</li>
+    <li><strong>專案</strong>：有目標與期限的任務集合；結束後停止更新，變成歷史資料。</li>
+    <li><strong>日記</strong>：與日期綁定、或暫時無法歸類的流入區。</li>
+    <li><strong>備忘</strong>：要保存但不需深度加工的資訊（密碼提示、食譜、地址、購物連結等），集中一頁反而更好找。</li>
+  </ul>
+  <div class="callout teal">分類線不應變成壁壘，而應像「血脈」——最終你會看到一塊知識可屬於多處，因為連結已千絲萬縷。</div>
+</section>
+
+<section class="section">
+  <h3>6. 全新的、革命性的日記模式</h3>
+  <p>日記不是寫「今天心情好不好」而已，而是<strong>預設捕獲面</strong>：會議火花、路上一閃而過的点子、尚未命名的觀察，先進入當日頁，再回鏈到知識或專案反射區。專案頁是行動地圖；日記是原料流水線。</p>
+</section>
+
+
+<div class="quiz" data-quiz="q2_1" data-answer="b" data-ok="對：塊是基本處理單位，如同神經元。" data-bad="回想：塊＝神經元。">
+  <div class="q-meta">互動問答</div>
+  <h4>在第二大腦隱喻中，「塊」對應什麼？</h4>
+  <div class="options"><label><input type="radio" name="q2_1" value="a"/> <span>大腦皮層整葉</span></label>
+<label><input type="radio" name="q2_1" value="b"/> <span>神經元</span></label>
+<label><input type="radio" name="q2_1" value="c"/> <span>頭骨</span></label>
+<label><input type="radio" name="q2_1" value="d"/> <span>脊髓</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
+
+<div class="quiz" data-quiz="q2_2" data-answer="c" data-ok="對。備忘是『資訊』導向、低加工、要好找。" data-bad="備忘例：地址、食譜、連結、卡片掃描。">
+  <div class="q-meta">互動問答</div>
+  <h4>下列哪項最適合放進「備忘」類？</h4>
+  <div class="options"><label><input type="radio" name="q2_2" value="a"/> <span>對『友誼』主題的三年反思</span></label>
+<label><input type="radio" name="q2_2" value="b"/> <span>下週產品發表的完整專案計畫</span></label>
+<label><input type="radio" name="q2_2" value="c"/> <span>常用藥局地址與營業時間</span></label>
+<label><input type="radio" name="q2_2" value="d"/> <span>一篇論文的深度筆記網絡</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
+
+<div class="quiz" data-quiz="q2_3" data-answer="a" data-ok="正確。專案會結束並封存；知識可持續。" data-bad="想想『發表會』vs『友誼』。">
+  <div class="q-meta">互動問答</div>
+  <h4>專案頁與知識頁最大差異是？</h4>
+  <div class="options"><label><input type="radio" name="q2_3" value="a"/> <span>專案有明確完成點，知識偏長期累積</span></label>
+<label><input type="radio" name="q2_3" value="b"/> <span>專案不能放圖片</span></label>
+<label><input type="radio" name="q2_3" value="c"/> <span>知識頁一週必須刪掉</span></label>
+<label><input type="radio" name="q2_3" value="d"/> <span>兩者完全相同</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
+
+<div class="quiz" data-quiz="q2_4" data-answer="b" data-ok="錯誤。多副本會漂移；引用／嵌入保持單一真相來源。" data-bad="書中強調避免臃腫與不同步。">
+  <div class="q-meta">互動問答</div>
+  <h4>判斷題：同一個想法複製貼到三個地方，比使用引用／嵌入更好維護。</h4>
+  <div class="options"><label><input type="radio" name="q2_4" value="a"/> <span>正確</span></label>
+<label><input type="radio" name="q2_4" value="b"/> <span>錯誤</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
+
+<div class="summary"><h3>章節總結</h3><ul>
+<li>塊原子化；用引用勝過複製。</li>
+<li>標籤做突觸，頁做反射區。</li>
+<li>四類：知識／專案／日記／備忘——寫完即分揀。</li>
+<li>日記是捕獲面，專案是行動面，知識是長期面。</li>
+</ul></div>
+<p class="pager"><a class="btn ghost" href="ch01.html">← 第一章</a><a class="btn" href="ch03.html">第三章 →</a></p>
+
+<div class="footer-note">本站為消化《第二大腦》（涂子沛／三采）後的自寫教學，非原文轉載。僅供個人學習使用。</div>
+</div>
+</main>
+</div>
+<script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
+</body>
+</html>

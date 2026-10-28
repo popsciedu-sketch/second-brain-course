@@ -1,0 +1,22 @@
+
+<svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="網狀立體知識結構">
+  <rect width="720" height="280" rx="16" fill="#1a1a2e"/>
+  <circle cx="360" cy="140" r="18" fill="#a78bfa"/>
+  <circle cx="220" cy="80" r="12" fill="#5eead4"/>
+  <circle cx="500" cy="70" r="12" fill="#5eead4"/>
+  <circle cx="180" cy="180" r="14" fill="#c4b5fd"/>
+  <circle cx="520" cy="190" r="14" fill="#c4b5fd"/>
+  <circle cx="300" cy="220" r="10" fill="#67e8f9"/>
+  <circle cx="430" cy="230" r="10" fill="#67e8f9"/>
+  <circle cx="260" cy="130" r="8" fill="#fcd34d"/>
+  <circle cx="460" cy="120" r="8" fill="#fcd34d"/>
+  <g stroke="#94a3b8" stroke-width="1.5" opacity=".8">
+    <line x1="360" y1="140" x2="220" y2="80"/><line x1="360" y1="140" x2="500" y2="70"/>
+    <line x1="360" y1="140" x2="180" y2="180"/><line x1="360" y1="140" x2="520" y2="190"/>
+    <line x1="360" y1="140" x2="300" y2="220"/><line x1="360" y1="140" x2="430" y2="230"/>
+    <line x1="220" y1="80" x2="260" y2="130"/><line x1="500" y1="70" x2="460" y2="120"/>
+    <line x1="180" y1="180" x2="300" y2="220"/><line x1="520" y1="190" x2="430" y2="230"/>
+    <line x1="260" y1="130" x2="180" y2="180"/><line x1="460" y1="120" x2="520" y2="190"/>
+  </g>
+  <text x="360" y="265" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Noto Sans TC,sans-serif">雙向連結把「樹狀資料夾」變成「可跳躍的知識網」</text>
+</svg>

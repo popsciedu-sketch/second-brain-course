@@ -1,0 +1,4 @@
+{:meta/version 1
+ :preferred-format "Markdown"
+ :hidden []
+ :default-templates {:journals ""}}

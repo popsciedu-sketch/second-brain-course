@@ -1,0 +1,29 @@
+
+<svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="四類資訊分揀">
+  <rect width="720" height="260" rx="16" fill="#faf8f5"/>
+  <g font-family="Noto Sans TC,sans-serif">
+    <rect x="20" y="40" width="160" height="170" rx="14" fill="#ede4f5" stroke="#5b2d8e"/>
+    <text x="100" y="80" text-anchor="middle" fill="#5b2d8e" font-size="18" font-weight="700">知識</text>
+    <text x="100" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">長期主題</text>
+    <text x="100" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">領域反射區</text>
+    <text x="100" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">例：友誼、寫作</text>
+
+    <rect x="195" y="40" width="160" height="170" rx="14" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="275" y="80" text-anchor="middle" fill="#1d4ed8" font-size="18" font-weight="700">專案</text>
+    <text x="275" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">有期限任務</text>
+    <text x="275" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">完成後封存</text>
+    <text x="275" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">例：發表會</text>
+
+    <rect x="370" y="40" width="160" height="170" rx="14" fill="#d9f5f1" stroke="#0d9488"/>
+    <text x="450" y="80" text-anchor="middle" fill="#0f766e" font-size="18" font-weight="700">日記</text>
+    <text x="450" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">按日流入</text>
+    <text x="450" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">未分類暫存</text>
+    <text x="450" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">日常活動</text>
+
+    <rect x="545" y="40" width="155" height="170" rx="14" fill="#ffedd5" stroke="#c2410c"/>
+    <text x="622" y="80" text-anchor="middle" fill="#c2410c" font-size="18" font-weight="700">備忘</text>
+    <text x="622" y="115" text-anchor="middle" fill="#4a4a5a" font-size="12">資訊非知識</text>
+    <text x="622" y="140" text-anchor="middle" fill="#4a4a5a" font-size="12">密碼、食譜</text>
+    <text x="622" y="165" text-anchor="middle" fill="#4a4a5a" font-size="12">地址、連結</text>
+  </g>
+</svg>

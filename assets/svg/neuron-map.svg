@@ -1,0 +1,26 @@
+
+<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="塊標籤頁對應神經結構">
+  <rect width="720" height="320" rx="16" fill="#fff"/>
+  <!-- neurons / blocks -->
+  <circle cx="120" cy="100" r="28" fill="#5b2d8e"/>
+  <circle cx="220" cy="180" r="28" fill="#5b2d8e"/>
+  <circle cx="140" cy="240" r="22" fill="#7c3aed"/>
+  <circle cx="280" cy="90" r="22" fill="#7c3aed"/>
+  <line x1="145" y1="118" x2="200" y2="160" stroke="#c4b5fd" stroke-width="3"/>
+  <line x1="140" y1="128" x2="145" y2="218" stroke="#c4b5fd" stroke-width="3"/>
+  <line x1="148" y1="90" x2="258" y2="90" stroke="#c4b5fd" stroke-width="3"/>
+  <line x1="240" y1="160" x2="265" y2="110" stroke="#c4b5fd" stroke-width="3"/>
+  <text x="120" y="105" text-anchor="middle" fill="#fff" font-size="12" font-family="Noto Sans TC,sans-serif">塊</text>
+  <text x="220" y="185" text-anchor="middle" fill="#fff" font-size="12" font-family="Noto Sans TC,sans-serif">塊</text>
+  <text x="180" y="40" text-anchor="middle" fill="#5b2d8e" font-size="16" font-weight="700" font-family="Noto Sans TC,sans-serif">神經元 = 塊</text>
+  <text x="180" y="300" text-anchor="middle" fill="#7a7a8c" font-size="12" font-family="Noto Sans TC,sans-serif">標籤 = 人工突觸（連線）</text>
+  <!-- page / cortex -->
+  <rect x="400" y="50" width="280" height="220" rx="14" fill="#d9f5f1" stroke="#0d9488" stroke-width="2"/>
+  <text x="540" y="85" text-anchor="middle" fill="#0d9488" font-size="16" font-weight="700" font-family="Noto Sans TC,sans-serif">頁 = 反射區</text>
+  <rect x="430" y="110" width="220" height="36" rx="8" fill="#fff" stroke="#99f6e4"/>
+  <rect x="430" y="160" width="220" height="36" rx="8" fill="#fff" stroke="#99f6e4"/>
+  <rect x="430" y="210" width="220" height="36" rx="8" fill="#fff" stroke="#99f6e4"/>
+  <text x="540" y="133" text-anchor="middle" fill="#134e4a" font-size="13" font-family="Noto Sans TC,sans-serif">主題頁：友誼</text>
+  <text x="540" y="183" text-anchor="middle" fill="#134e4a" font-size="13" font-family="Noto Sans TC,sans-serif">專案頁：產品發表</text>
+  <text x="540" y="233" text-anchor="middle" fill="#134e4a" font-size="13" font-family="Noto Sans TC,sans-serif">日記頁：2026-10-28</text>
+</svg>
