@@ -46,7 +46,7 @@
 
 <div class="kicker">實作路徑</div>
 <h2>Logseq 實作：從安裝到 Query</h2>
-<p class="lead">按下列步驟建立一個小型「第二大腦」練習庫。可下載練習資料包匯入或對照輸入。每步附預期畫面示意（自製 UI 示意，非官方截圖）。</p>
+<p class="lead">按下列步驟建立一個小型「第二大腦」練習庫。可下載練習資料包匯入或對照輸入。本頁已對照 <strong>Logseq 2.0（DB 版）</strong> 與 <strong>Logseq OG（檔案版）</strong>；課程後續步驟以<strong>可直接寫入 Markdown 資料夾</strong>的 OG 為主。</p>
 <div class="card teal" style="margin-bottom:1rem">
   <h3>練習資料</h3>
   <p>路徑：<span class="mono">assets/practice-data/</span> · 內含示例 Markdown 與 zip。清單見 <span class="mono">DRIVE_UPLOAD_MANIFEST.md</span>。</p>
@@ -57,18 +57,70 @@
   </p>
 </div>
 
+<section class="section" id="logseq-2-vs-og">
+  <h3>為什麼找不到「Open a local graph」？</h3>
+  <p>若你剛用 Homebrew 裝的是 <span class="mono">Logseq 2.0.x</span>（App 路徑常是 <span class="mono">/Applications/Logseq.app</span>），介面上<strong>不會再出現</strong>「Open a local graph／Open a local directory」。這不是壞掉，而是產品線變了：</p>
+  <ul>
+    <li><strong>Logseq 2.0</strong>＝現行主線，資料存在<strong>內部資料庫（DB）</strong>，不再直接把某個 Markdown 資料夾當「活 graph」打開。</li>
+    <li><strong>Logseq OG 1.0</strong>＝刻意保留的<strong>檔案版</strong>支線，仍用本地 <span class="mono">pages/</span>、<span class="mono">journals/</span> 等明文資料夾；本教材與助手代寫都依這條路最順。</li>
+  </ul>
+  <div class="callout warn">本機若已在 <span class="mono">~/Documents/第二大腦</span> 建好骨架（<span class="mono">pages/</span>、<span class="mono">journals/</span>、<span class="mono">logseq/config.edn</span>、<span class="mono">assets/</span>，預設頁含 inbox、知識、專案、備忘、週回），那是<strong>檔案型 graph</strong>。要用助手穩定寫入這些 <span class="mono">.md</span>，請開 <strong>Logseq OG</strong>，不要只開 2.0。</div>
+
+  <h4>版本對照</h4>
+  <table class="simple">
+    <thead>
+      <tr><th></th><th>Logseq 2.0.2</th><th>Logseq OG 1.0.0</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>產品線</th><td>現行主線，較新</td><td>刻意保留的檔案版支線</td></tr>
+      <tr><th>儲存</th><td>內部資料庫（DB）</td><td>本地 Markdown 資料夾</td></tr>
+      <tr><th>開本地資料夾</th><td>無此選項</td><td>有（All graphs → Open a local directory）</td></tr>
+      <tr><th>與助手代寫</th><td>難：不能穩定地直接改 Documents 下的 .md 當「活資料」</td><td>易：助手寫入 <span class="mono">pages/</span>、<span class="mono">journals/</span> 即生效</td></tr>
+      <tr><th>傳承／備份</th><td>需 Export（SQLite／鏡像 Markdown）</td><td>資料夾即明文，可直接備份繼承</td></tr>
+      <tr><th>Homebrew（macOS）</th><td><span class="mono">brew install --cask logseq</span></td><td><span class="mono">brew install --cask logseq-og</span>（App 名 Logseq-OG，可與 2.0 並存）</td></tr>
+    </tbody>
+  </table>
+
+  <h4>若堅持用 2.0 沿用現有資料夾</h4>
+  <p>可以把檔案型骨架<strong>匯入成 DB 副本</strong>（之後主資料在 DB；Markdown 鏡像若有，也不是助手主要寫入目標）：</p>
+  <ol>
+    <li>打開 Logseq 2.0</li>
+    <li>右上角 <strong>⋯</strong> → <strong>Import</strong> → <strong>File to DB graph</strong></li>
+    <li>選 graph 根目錄（含 <span class="mono">logseq/config.edn</span> 的那層，例如 <span class="mono">Documents/第二大腦</span>）</li>
+    <li>為新的 DB graph 命名</li>
+  </ol>
+  <div class="shot-slot" data-shot="logseq-2-open-app"><strong>截圖預留：開 Logseq 2.0 App</strong><span>之後補上啟動畫面</span></div>
+  <div class="shot-slot" data-shot="logseq-2-import"><strong>截圖預留：⋯ → Import → File to DB graph</strong><span>標出選單路徑</span></div>
+
+  <h4>本課建議：用 OG 打開本地資料夾</h4>
+  <p>安裝 OG 後：<strong>All graphs → Open a local directory</strong>，指向 <span class="mono">~/Documents/第二大腦</span>（或練習包解壓後的 graph 根目錄）。之後本頁「日記／四類／Query」步驟都在 OG 裡操作。</p>
+  <div class="shot-slot" data-shot="logseq-og-open-dir"><strong>截圖預留：OG「Open a local directory」</strong><span>All graphs 畫面</span></div>
+</section>
+
 <div class="steps">
   <div class="step">
-    <h4>下載並安裝 Logseq</h4>
-    <p>前往 <a href="https://logseq.com" target="_blank" rel="noopener">logseq.com</a> 下載桌面版（Windows／macOS／Linux）。安裝後開啟應用程式。亦可先用瀏覽器版體驗，但本教程以<strong>本地 graph 資料夾</strong>為準，方便備份與傳承。</p>
-    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-    <div class="body">Welcome to Logseq
-[ Add local graph ]   [ Clone from Git ]</div></div>
+    <h4>下載並安裝（建議 OG）</h4>
+    <p>macOS 可用 Homebrew 並存兩版：</p>
+    <ul>
+      <li>檔案版（本課主線）：<span class="mono">brew install --cask logseq-og</span> → App 名 <strong>Logseq-OG</strong></li>
+      <li>DB 版（現行主線）：<span class="mono">brew install --cask logseq</span> → <span class="mono">/Applications/Logseq.app</span></li>
+    </ul>
+    <p>其他平台也可自 <a href="https://logseq.com" target="_blank" rel="noopener">logseq.com</a> 了解發行說明。本教程後續以<strong>本地 Markdown graph 資料夾</strong>為準，方便備份、傳承與助手代寫。</p>
+    <div class="shot-slot" data-shot="logseq-install"><strong>截圖預留：安裝後的 App 圖示（Logseq vs Logseq-OG）</strong><span>Applications 資料夾對照</span></div>
+    <div class="mock-ui"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span> Logseq-OG</div>
+    <div class="body">All graphs
+[ Open a local directory ]   [ Create a new graph ]</div></div>
   </div>
 
   <div class="step">
-    <h4>建立本地 Graph</h4>
-    <p>選擇「Add local graph」，新建資料夾例如 <span class="mono">SecondBrain-Practice</span>。這就是你的大腦皮層檔案根目錄——全是明文 Markdown／資料檔，利於繼承。</p>
+    <h4>用 OG 打開（或新建）本地 Graph</h4>
+    <p>在 <strong>Logseq-OG</strong> 選「Open a local directory」：</p>
+    <ul>
+      <li>已有骨架：選 <span class="mono">~/Documents/第二大腦</span>（需含 <span class="mono">logseq/config.edn</span>）。</li>
+      <li>從零練習：新建資料夾例如 <span class="mono">SecondBrain-Practice</span>，或解壓練習包後指向其 graph 根目錄。</li>
+    </ul>
+    <p>這就是你的大腦皮層檔案根目錄——全是明文 Markdown／資料檔，利於繼承。若你開的是 2.0 而找不到此按鈕，請回到上一節「版本對照」。</p>
+    <div class="shot-slot" data-shot="logseq-og-pick-folder"><strong>截圖預留：系統選資料夾對話框</strong><span>選中 Documents/第二大腦</span></div>
   </div>
 
   <div class="step">
@@ -204,10 +256,22 @@
   <div class="feedback"></div>
 </div>
 
+
+<div class="quiz" data-quiz="qp_4" data-answer="b" data-ok="對。2.0 是 DB 版；要開 Documents 下的 Markdown 骨架請用 Logseq OG。" data-bad="回想上一節版本對照。">
+  <div class="q-meta">互動問答</div>
+  <h4>在 Logseq 2.0 裡找不到「Open a local directory」時，較合理的理解是？</h4>
+  <div class="options"><label><input type="radio" name="qp_4" value="a"/> <span>安裝失敗，必須重裝同一個 cask</span></label>
+<label><input type="radio" name="qp_4" value="b"/> <span>2.0 改為 DB 版，本來就沒有直接開本地資料夾；檔案型請用 Logseq OG</span></label>
+<label><input type="radio" name="qp_4" value="c"/> <span>只能改用瀏覽器版才會出現該按鈕</span></label>
+<label><input type="radio" name="qp_4" value="d"/> <span>必須先刪除 ~/Documents/第二大腦 才會顯示</span></label></div>
+  <p style="margin:.8rem 0 0"><button class="btn" type="button" data-check>核對答案</button></p>
+  <div class="feedback"></div>
+</div>
+
 </section>
 
 <div class="summary"><h3>實作總結</h3><ul>
-<li>本地 graph＝可備份、可繼承的大腦檔案。</li>
+<li>本課用 Logseq OG 的本地 Markdown graph＝可備份、可繼承；2.0 是 DB 版，找不到「開本地資料夾」屬正常。</li>
 <li>日記捕獲 → 四類分揀 → 連結／引用 → Query 回顧。</li>
 <li>用練習包完成一次「微型人生資料庫」循環。</li>
 </ul></div>

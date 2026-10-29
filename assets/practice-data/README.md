@@ -1,5 +1,7 @@
 # 第二大腦 · Logseq 練習資料包
 
+
+> **版本提醒：** 練習包是檔案型 graph。請用 **Logseq OG**（`brew install --cask logseq-og`）以「Open a local directory」打開。Logseq 2.0 為 DB 版，介面沒有該選項；若要用 2.0，需走 Import → File to DB graph（匯入成 DB 副本，之後主資料在 DB）。詳見教材 `practice/index.html` 一節「為什麼找不到 Open a local graph」。
 ## 內容
 - `inbox-unsorted.md`：12 條待分揀素材
 - `pages/`：友誼、專案/產品發表、備忘、塊與神經元、儀表板
